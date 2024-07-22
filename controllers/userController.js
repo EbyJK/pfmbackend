@@ -1,6 +1,6 @@
-const userModel =require('.../models/userModel')
+// const userModel= require('.../models/userModel')
 
-
+const userModel = require('../models/userMOdel');
 //login callback
 const loginController=async(req,res)=>{
     try{

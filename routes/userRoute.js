@@ -3,7 +3,7 @@ const { loginController, registerController } = require('../controllers/userCont
 
 //router object
 const router=express.Router()
-
+const userController = require('../controllers/userController');
 
 //routers
 //POST|| LOGIN
