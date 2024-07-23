@@ -64,6 +64,10 @@ app.use(express.json());
 //routes
 app.use('/api/v1/users', require('./routes/userRoute'));
 
+//transaction routes
+app.use('/api/v1/transactions',require('./routes/transactionRoutes'));
+
+
 // Use portfinder to get an available port
 portfinder.basePort = process.env.PORT || 8090;
 portfinder.getPort((err, port) => {
