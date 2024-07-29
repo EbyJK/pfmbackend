@@ -1,5 +1,5 @@
 const express=require('express');
-const { getAllTransaction, addTransaction,editTransaction,deleteTransaction} = require('../controllers/transactionCtrl');
+const { getAllTransaction, addTransaction,editTransaction,deleteTransaction,getAllUserTransactions} = require('../controllers/transactionCtrl');
 
 
 //router object
@@ -17,4 +17,5 @@ router.post('/get-transaction',getAllTransaction)
 //delete transaction
 
 router.post('/delete-transaction',deleteTransaction)
+router.get('/all-user-transactions', getAllUserTransactions);
 module.exports=router;

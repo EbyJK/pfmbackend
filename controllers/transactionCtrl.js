@@ -110,6 +110,15 @@ const deleteTransaction =async(req,res)=>{
      }
 
 }
+const getAllUserTransactions = async (req, res) => {
+  try {
+    const transactions = await transactionModel.find();
+    res.status(200).json(transactions);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: 'Error fetching all user transactions' });
+  }
+};
 
 const editTransaction = async (req, res) => {
   try {
@@ -132,4 +141,4 @@ const addTransaction = async (req, res) => {
   }
 };
 
-module.exports = { getAllTransaction, addTransaction, editTransaction,deleteTransaction };
+module.exports = { getAllTransaction, addTransaction, editTransaction,deleteTransaction,getAllUserTransactions  };
